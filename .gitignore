@@ -1,1 +1,3 @@
-ECHO is on.
+#custom file
+/virtEnv/
+/frontend/node_modules/
