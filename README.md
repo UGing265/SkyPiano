@@ -8,8 +8,8 @@ https://codelearn.io/sharing/git-github-tu-co-ban-den-nang-cao-p1
 
 
 ### Công nghệ của SkyPiano
-Python: 3.12.4
-Django: > 4.2 
+Python: 3.12.4 \
+Django: > 4.2 \
 React: > 18.3 
 
 
