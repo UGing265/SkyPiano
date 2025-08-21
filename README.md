@@ -37,6 +37,11 @@ npm i axios
 - Backend
 ```
 # trong /backend
+# tạo & kích hoạt venv (Windows dùng venv\Scripts\activate)
+python -m venv .venv
+source .venv/bin/activate
+
+# đảm bảo đang chạy venv
 python manage.py migrate
 python manage.py runserver 8000
 # API sẽ chạy tại http://localhost:8000/api/...
