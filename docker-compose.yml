@@ -1,0 +1,21 @@
+services:
+  backend:
+    build: ./backend
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    env_file:
+      - ./backend/.env
+
+  frontend:
+    build: ./frontend
+    command: pnpm dev --host
+    ports:
+      - "5173:5173"   # nếu Next.js thì đổi thành "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    env_file:
+      - ./frontend/.env
