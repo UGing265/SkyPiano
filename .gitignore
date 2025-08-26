@@ -1,3 +1,5 @@
 #custom file
 /virtEnv/
 /frontend/node_modules/
+.git
+.env*

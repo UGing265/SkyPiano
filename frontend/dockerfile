@@ -1,0 +1,16 @@
+# từ alpine -> Debian (glibc) để tránh nhánh musl
+FROM node:20
+
+WORKDIR /app
+RUN corepack enable && corepack prepare pnpm@latest --activate
+
+# cài deps theo lockfile
+COPY package.json pnpm-lock.yaml* ./
+RUN --mount=type=cache,id=pnpm-store,target=/root/.local/share/pnpm/store \
+    pnpm install --frozen-lockfile
+
+# copy code (đảm bảo đã .dockerignore node_modules)
+COPY . .
+
+EXPOSE 5173
+CMD ["pnpm","dev","--host"]
