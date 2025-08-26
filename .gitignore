@@ -2,3 +2,5 @@
 /virtEnv/
 /frontend/node_modules/
 /backend/db.sqlite3/
+.git
+.env*
