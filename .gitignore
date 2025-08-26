@@ -3,4 +3,6 @@
 /frontend/node_modules/
 /backend/db.sqlite3/
 .git
-.env*
+
+# Ignore mọi file .env* ở bất kỳ thư mục con nào
+**/.env*
